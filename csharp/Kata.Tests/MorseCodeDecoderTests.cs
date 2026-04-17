@@ -8,8 +8,13 @@ public class MorseCodeDecoderTests
     }
 
     [Test]
-    public void Test1()
+    public void MorseCodeDecoderBasicTest_1()
     {
-        Assert.Pass();
+        string input = ".... . -.--   .--- ..- -.. .";
+        string expected = "HEY JUDE";
+
+        string actual = MorseCodeDecoder.Decode(input);
+
+        Assert.That(actual, Is.EqualTo(expected));
     }
 }
