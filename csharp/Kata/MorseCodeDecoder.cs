@@ -7,7 +7,7 @@ public class MorseCodeDecoder
     // you can use the preloaded MorseCode:
     // var letter = MorseCode.Get(morse);
     // Split by exactly three spaces
-    string[] words = morseCode.Split(["   "], StringSplitOptions.None);
+    string[] words = morseCode.Trim().Split(["   "], StringSplitOptions.None);
 
     var decodedWords = new List<string>();
 
